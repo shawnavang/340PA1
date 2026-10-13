@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EDM Festivals By State</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="edmstyle.css" />
+
+    <div class="neon-container">
+        <div class="ball b1"></div>
+        <div class="ball b2"></div>
+        <div class="ball b3"></div>
+        <div class="ball b4"></div>
+        <div class="ball b5"></div>
+        <div class="ball b6"></div>
+        <div class="ball b7"></div>
+        <div class="ball b8"></div>
+        <div class="ball b9"></div>
+        <div class="ball b10"></div>
+    </div>
+
+    <div class="container">
+        <h1 class="glow">EDM Festival Finder</h1>
+
+        <div>
+            <br>
+            <p>Which state are you visiting?</p>
+            <select name="state" select class="form-select mb-3" id="state">
+                <option value=""></option>
+                <option value="alabama">Alabama</option>
+                <option value="alaska">Alaska</option>
+                <option value="arizona">Arizona</option>
+                <option value="arkansas">Arkansas</option>
+                <option value="california">California</option>
+                <option value="colorado">Colorado</option>
+                <option value="connecticut">Connecticut</option>
+                <option value="delaware">Delaware</option>
+                <option value="florida">Florida</option>
+                <option value="georgia">Georgia</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="idaho">Idaho</option>
+                <option value="illinois">Illinois</option>
+                <option value="indiana">Indiana</option>
+                <option value="iowa">Iowa</option>
+                <option value="kansas">Kansas</option>
+                <option value="kentucky">Kentucky</option>
+                <option value="louisiana">Louisiana</option>
+                <option value="maine">Maine</option>
+                <option value="maryland">Maryland</option>
+                <option value="massachusetts">Massachusetts</option>
+                <option value="michigan">Michigan</option>
+                <option value="minnesota">Minnesota</option>
+                <option value="mississippi">Mississippi</option>
+                <option value="missouri">Missouri</option>
+                <option value="montana">Montana</option>
+                <option value="nebraska">Nebraska</option>
+                <option value="nevada">Nevada</option>
+                <option value="newhampshire">New Hampshire</option>
+                <option value="newjersey">New Jersey</option>
+                <option value="newmexico">New Mexico</option>
+                <option value="newyork">New York</option>
+                <option value="northcarolina">North Carolina</option>
+                <option value="northdakota">North Dakota</option>
+                <option value="ohio">Ohio</option>
+                <option value="oklahoma">Oklahoma</option>
+                <option value="oregon">Oregon</option>
+                <option value="pennsylvania">Pennsylvania</option>
+                <option value="rhodeisland">Rhode Island</option>
+                <option value="southcarolina">South Carolina</option>
+                <option value="southdakota">South Dakota</option>
+                <option value="tennessee">Tennessee</option>
+                <option value="texas">Texas</option>
+                <option value="utah">Utah</option>
+                <option value="vermont">Vermont</option>
+                <option value="virginia">Virginia</option>
+                <option value="washington">Washington</option>
+                <option value="westvirginia">West Virginia</option>
+                <option value="wisconsin">Wisconsin</option>
+                <option value="wyoming">Wyoming</option>
+            </select>
+        </div>
+
+        <div>
+            <p>When are you planning to attend?</p>
+            <select name="month" select class="form-select mb-3" id="month">
+                <option value=""></option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+        </div>
+
+        <div>
+            <p>What is your budget?</p>
+            <input type="number" id="budget" min="0.00" max="999999.00" step="0.01" />
+        </div>
+
+        <br>
+
+        <div>
+            <p>Indoor event
+                <label class="switch">
+                    <input type="checkbox" id="indoorToggle">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+
+            <p>Outdoor event
+                <label class="switch">
+                    <input type="checkbox" id="outdoorToggle">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+
+            <p>Camping available
+                <label class="switch">
+                    <input type="checkbox" id="campingToggle">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+
+            <p>VIP available
+                <label class="switch">
+                    <input type="checkbox" id="vipToggle">
+                    <span class="slider round"></span>
+                </label>
+            </p>
+        </div>
+
+        <div>
+            <p>What genre(s) of EDM do you want to experience?</p>
+            <input type="checkbox" id="house" name="option1" value="house">
+            <label for="option1"> House</label><br>
+            <input type="checkbox" id="techno" name="option2" value="techno">
+            <label for="option2"> Techno</label><br>
+            <input type="checkbox" id="dubstep" name="option3" value="dubstep">
+            <label for="option3"> Dubstep</label><br>
+            <input type="checkbox" id="trap" name="option4" value="trap">
+            <label for="option4"> Trap</label><br>
+            <input type="checkbox" id="drumandbass" name="option5" value="drumandbass">
+            <label for="option5"> Drum and Bass</label><br>
+            <input type="checkbox" id="hardstyle" name="option6" value="hardstyle">
+            <label for="option6"> Hardstyle</label><br>
+            <input type="checkbox" id="other" name="option7" value="other">
+            <label for="option7"> Other</label><br>
+        </div>
+
+        <label for="limitresults" class="form-label mt-3">Limit results:</label>
+        <select name="limitresults" select class="form-select mb-3" id="limitresults">
+            <option value=""></option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+
+        <div>
+            <br><input type="button" id="submit" value="Submit">
+        </div>
+    </div>
+
+    <div id='festivals' class='overflow'>
+    </div>
+</body>
+
+<script>
+const balls = document.querySelectorAll('.ball');
+
+const ballData = [];
+
+balls.forEach(ball => {
+  const size = Math.random() * 20 + 15;
+
+  ball.style.width = size + 'px';
+  ball.style.height = size + 'px';
+
+  ballData.push({
+    el: ball,
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    vx: (Math.random() - 0.5) * 6,
+    vy: (Math.random() - 0.5) * 6,
+    size: size
+  });
+});
+
+function animate() {
+  ballData.forEach(b => {
+    b.x += b.vx;
+    b.y += b.vy;
+
+    if (b.x <= 0 || b.x + b.size >= window.innerWidth) {
+      b.vx *= -1;
+    }
+    if (b.y <= 0 || b.y + b.size >= window.innerHeight) {
+      b.vy *= -1;
+    }
+
+    b.el.style.transform = `translate(${b.x}px, ${b.y}px)`;
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+    
+    document.getElementById('submit').addEventListener('click', () => {
+        const button = document.getElementById('submit');
+        button.classList.remove('bass-pulse');
+        void button.offsetWidth;
+        button.classList.add('bass-pulse');
+        const params = new URLSearchParams();
+
+        params.append('state', document.getElementById('state').value);
+        params.append('month', document.getElementById('month').value);
+        params.append('budget', document.querySelector('input[type="number"]').value);
+
+        params.append('indoor', document.getElementById('indoorToggle').checked ? 1 : 0);
+        params.append('outdoor', document.getElementById('outdoorToggle').checked ? 1 : 0);
+        params.append('camping', document.getElementById('campingToggle').checked ? 1 : 0);
+        params.append('vip', document.getElementById('vipToggle').checked ? 1 : 0);
+
+        params.append('house', document.getElementById('house').checked ? document.getElementById('house').value : '');
+        params.append('techno', document.getElementById('techno').checked ? document.getElementById('techno').value : '');
+        params.append('dubstep', document.getElementById('dubstep').checked ? document.getElementById('dubstep').value : '');
+        params.append('trap', document.getElementById('trap').checked ? document.getElementById('trap').value : '');
+        params.append('drumandbass', document.getElementById('drumandbass').checked ? document.getElementById('drumandbass').value : '');
+        params.append('hardstyle', document.getElementById('hardstyle').checked ? document.getElementById('hardstyle').value : '');
+        params.append('other', document.getElementById('other').checked ? document.getElementById('other').value : '');
+
+        const limit = document.getElementById('limitresults').value;
+        if (limit) {
+            params.append('limit', limit);
+        }
+
+        const url = `//localhost:8080/edm_festivals/?${params.toString()}`;
+
+        fetch(url, { method: "GET" })
+            .then(response => response.json())
+            .then(data => {
+                const html = `
+<div class="table-responsive">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Cost</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        ${data.data?.map(row => `
+            <tr>
+                <td>${row.name}</td>
+                <td>${row.location}</td>
+                <td>${row.date_of_event}</td>
+                <td>${row.cost_of_event}</td>
+               
+            </tr>
+        `).join('') || ''}
+    </tbody>
+</table>
+</div>
+`;
+
+                document.getElementById('festivals').innerHTML = html;
+            });
+
+    });
+</script>
+
+</html>
